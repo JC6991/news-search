@@ -35,6 +35,7 @@ function ajaxHandler (a, b, c, d) {
 
 
 $("#search").on("click", function(){
+  $("#results").empty();
     let querySearch = searchTerm.val().trim();
     let queryRecordNo = recordNo.val().trim();
     let queryStart = startY.val().trim();
