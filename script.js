@@ -17,9 +17,9 @@ function ajaxHandler (a, b, c, d) {
     
     for(let i = 0; i < b; i++){
       let newsDiv = $("<div>");
-      let title = $("<p class='lead' style='font-weight:bold;'>").text(response.response.docs[i].abstract);
+      let title = $("<p class='lead' style='font-weight:bold;'>").text(response.response.docs[i].headline.main);
       let date = $("<p>").text(response.response.docs[i].pub_date);
-      let snippet = $("<p>").text(response.response.docs[i].snippet);
+      let snippet = $("<p>").text(response.response.docs[i].abstract);
       newsDiv.append(title, date, snippet);
       $("#results").append(newsDiv);
     
